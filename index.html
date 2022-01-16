@@ -1,0 +1,187 @@
+<!-- survey form --> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="mystyles.css" />
+	<title>Survey Form</title>
+	<script src="https://kit.fontawesome.com/41c8573884.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- back to top button -->
+	<button onclick="topFunction()" id="top-button" title="Go to top">
+		<i class="fas fa-long-arrow-alt-up"></i></i>
+	</button>
+	<!-- MAIN -->
+	<main class="container">
+		<!-- HEADER -->
+		<header>
+			<h1 id="title" class="center-text">
+				Bella&Bailey Dog Academy Survey Form
+			</h1>
+			<!-- DESCRIPTION -->
+			<p id="description" class="center-text">
+				Below is a quick survey that will help us understand and learn
+				about you and your dog's training experience.
+			<p class="center-text">Thank you for helping
+				us improve our services.</p>
+			</p>
+		</header>
+		<!-- FORM -->
+		<form action="https://www.freecodecamp.com/email-submit" target="_blank" id="survey-form" method="post">
+			<!-- REQUIRED INFO -->
+			<div class="part">
+				<label for="name" id="name-label">What is your name?</label>
+				<input type="text" name="name" id="name" class="control" placeholder="First name only" required />
+			</div>
+			<div class="part">
+				<label for="email_address" id="email-label">Email address</label>
+				<input aria-label="email" type="email" name="email_address" id="email" class="control" placeholder="Enter your email address" required />
+			</div>
+			<div class="part">
+				<label for="number" id="number-label">What is your age? <span class="notice">(Optional)</span></label>
+				<input type="number" name="age" id="number" class="control" min="18" max="100" placeholder="Age" />
+			</div>
+			<!-- OPTIONS -->
+			<div class="part">
+				<p class="clear">Which option best describes your dog's specific role?</p>
+				<select name="dog_role" id="dropdown" class="control" required>
+					<option disabled selected value>Select your dog's role</option>
+					<option value="service">Service Dog</option>
+					<option value="therapy">Therapy Dog</option>
+					<option value="police">Police K9 Dog</option>
+					<option value="military">Military Dog</option>
+					<option value="family">Family Dog</option>
+					<option value="rescue">Search & Rescue Dog</option>
+				</select>
+			</div>
+			<!-- RADIO -->
+			<div class="part">
+				<p class="clear">What is your initial reaction to the service?</p>
+				<label>
+					<input aria-label="reaction" type="radio" class="radio-button" name="reaction" value="very_positive" checked />Very positive
+				</label>
+				<label>
+					<input aria-label="reaction" type="radio" class="radio-button" name="reaction" value="somewhat_positive" />Somewhat positive
+				</label>
+				<label>
+					<input aria-label="reaction" type="radio" class="radio-button" name="reaction" value="neutral" />Neutral
+				</label>
+				<label>
+					<input aria-label="reaction" type="radio" class="radio-button" name="reaction" value="somewhat_negative" />Somewhat negative
+				</label>
+				<label>
+					<input aria-label="reaction" type="radio" class="radio-button" name="reaction" value="very_negative" />Very
+					negative
+				</label>
+			</div>
+			<div class="part">
+				<p class="clear">How would you rate the quality of the service?</p>
+				<label>
+					<input aria-label="quality" type="radio" class="radio-button" name="quality" value="very_high_quality" checked />Very high quality
+				</label>
+				<label>
+					<input aria-label="quality" type="radio" class="radio-button" name="quality" value="high_quality" />High
+					quality
+				</label>
+				<label>
+					<input aria-label="quality" type="radio" class="radio-button" name="quality" value="neither_high_low" />Neither high nor low quality
+				</label>
+				<label>
+					<input aria-label="quality" type="radio" class="radio-button" name="quality" value="low_quality" />Low
+					quality
+				</label>
+				<label>
+					<input aria-label="quality" type="radio" class="radio-button" name="quality" value="very_low_quality" />Very low quality
+				</label>
+			</div>
+			<div class="part">
+				<p class="clear">
+					How likely is it that you would recommend our service to a family
+					member, friend or colleague?
+				</p>
+				<label>
+					<input aria-label="recommend" type="radio" class="radio-button" name="recommend" value="extremely_likely" checked />Extremely likely
+				</label>
+				<label>
+					<input aria-label="recommend" type="radio" class="radio-button" name="recommend" value="not_sure" />Not sure
+				</label>
+				<label>
+					<input aria-label="recommend" type="radio" class="radio-button" name="recommend" value="not_likely" />Not
+					likely
+				</label>
+			</div>
+			<!-- CHECKBOX -->
+			<div class="part">
+				<p class="clear">
+					What would you like to see improved?
+					<span class="notice">(Check all that apply)</span>
+				</p>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="in_home_training" />In-home Training
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="dog-safety" />Dog
+					Safety
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="indoor-kennels" />Climate-controlled kennels
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="trainers" />Training
+					Specialists
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="private_lessons" />Private Lessons
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="group-classes" />Group Classes
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="in_home_training" />In-home Dog Training
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="school" />School for
+					Dog Trainers
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="behavior_mod" />Behavior Modification
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="police-k9" />Police
+					K9 Training
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="service_dog" />Service Dog Training
+				</label>
+				<label>
+					<input aria-label="improve" type="checkbox" class="checkbox-button" name="improve" value="search_rescue" />Search and Rescue Dog Training
+				</label>
+			</div>
+			<!-- TEXTAREA -->
+			<div class="part">
+				<p class="clear">Comments or suggestions?</p>
+				<textarea name="comments" id="comments" class="textarea-box" cols="30" rows="10" placeholder="Please enter your comments or suggestions here..."></textarea>
+			</div>
+			<!-- SUBMIT -->
+			<div class="part">
+				<button id="submit" class="submit-button">Submit</button>
+			</div>
+		</form>
+		<footer>
+			<p>Raya Bergin LBCC Fall2021 COSW20 &copy; 29|30Oct2021</p>
+		</footer>
+	</main>
+	<script src="myscripts.js"></script>
+</body>
+
+</html>
